@@ -1,0 +1,12 @@
+<h2>Prueba de comunicacion con el web api</h2>
+
+@for(clima of climas; track $index){
+  <div>
+    <div>Fecha: {{clima.date}}</div>
+    <div>Temperatura (C): {{clima.temperatureC}}</div>
+    <div>Temperatura (F): {{clima.temperatureF}}</div>
+    <div>Resumen: {{clima.summary}}</div>
+  </div>
+  <hr>
+  
+}
