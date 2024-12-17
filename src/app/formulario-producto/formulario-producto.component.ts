@@ -21,6 +21,9 @@ export class FormularioProductoComponent implements OnInit{
     @Input({required: true})
     titulo!: string;
 
+    @Input({required: true})
+    accion!: string;
+
     @Input()
     modelo?: Laptop
 

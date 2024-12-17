@@ -3,11 +3,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { LaptopService } from '../laptop.service';
 import { Laptop } from '../laptop.models';
+import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-indice-productos',
-  imports: [MatButtonModule, RouterLink, MatTableModule],
+  imports: [MatButtonModule, RouterLink, MatTableModule,  CommonModule, ],
   templateUrl: './indice-productos.component.html',
   styleUrl: './indice-productos.component.css'
 })

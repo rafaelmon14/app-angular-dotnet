@@ -1,12 +1,12 @@
-<h2>{{titulo}}</h2>
+<h2 class="text-2xl py-5">{{titulo}}</h2>
 
 <form (submit)="guardarCambios()" [formGroup]="form">
-    <mat-form-field appearance="outline">
-        <mat-label>Nombre</mat-label>
-        <input [formControl]="form.controls.nombre" matInput>
-    </mat-form-field>
+    <label>Nombre</label>
     <div>
-        <button type="submit" mat-flat-button>Guardar Cambios</button>
-        <a mat-stroked-button routerLink="/productos">Cancelar</a>
+        <input [formControl]="form.controls.nombre" class="p-2 border-gray-400 border rounded-md">
+    </div>
+    <div class="mt-10">
+        <button type="submit" class="bg-green-600 p-2 rounded-full text-white font-semibold">{{accion}}</button>
+        <a routerLink="/productos" class="bg-slate-600 p-2 rounded-full text-white font-semibold">Cancelar</a>
     </div>
 </form>

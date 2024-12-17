@@ -1,0 +1,27 @@
+<h2 class="font-bold text-2xl">Inventario</h2>
+
+<button class="bg-green-500 text-white rounded-lg p-2 my-3" routerLink="/stock/crear" >
+    Agregar Producto
+</button>
+
+
+@if (inventarios) {    
+        <table class="mt-10 table-auto">
+            <thead>
+                <tr>
+                    <th class="font-extralight">Producto</th>
+                    <th class="font-extralight">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stock of inventarios">
+                    <td class="font-normal text-lg pr-5">{{stock.nombre}}</td>
+                    <td>
+                        <a routerLink="/stock/editar/{{stock.id}}" class="bg-yellow-500 rounded-full px-3 font-medium">Editar</a>
+                        <button class="bg-red-500 rounded-full px-3 font-medium" (click)="borrar(stock.id)">Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+}
